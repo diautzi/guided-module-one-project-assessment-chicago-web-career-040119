@@ -1,14 +1,24 @@
-# This file is auto-generated from the current state of the database. Instead
-# of editing this file, please use the migrations feature of Active Record to
-# incrementally modify your database, and then regenerate this schema definition.
-#
-# Note that this schema.rb definition is the authoritative source for your
-# database schema. If you need to create the application database on another
-# system, you should be using db:schema:load, not running all the migrations
-# from scratch. The latter is a flawed and unsustainable approach (the more migrations
-# you'll amass, the slower it'll run and the greater likelihood for issues).
-#
-# It's strongly recommended that you check this file into your version control system.
+
+User Stories
+
+-as a user, I want to be able to retrieve personal information about a given actor
+-as a user I want to be able to see a given actor's characters, and character's favorite quote
+-as a user I want to be able to retrieve all the movies for a given actor
+-as a user, I want to be able to add an actor to the app, if the actor doesn't belong in the apps database yet, update the information on the existing actor, or delete an actor from the database
+
+    Domain model - IMDb domain
+Genre <- Movie -> Role <-  Actor
+
+
+- movie belongs to a genre
+- movie has many roles
+- actors have many roles
+- roles belong to movie
+- roles belong to actors
+"Roles" is going to be our join table. Setting the "foreign keys" for our artists and for our movies in the roles table, we are able to set the associations for our models
+
+
+Schema :
 
 ActiveRecord::Schema.define(version: 2019_04_16_143332) do
 
